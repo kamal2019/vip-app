@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import 'swiper/swiper-bundle.css'
 
 import Card from '../components/Card'
-import hero from '../image/hero.jpg'
+import banner from '../image/banner.png'
 
 function Home() {
   const [posts, setPosts] = React.useState([])
@@ -27,17 +27,19 @@ function Home() {
   return (
     <>
       <div
-        className='hero min-h-screen/2'
+        className='hero min-h-screen/'
         style={{
-          backgroundImage: `url(${hero})`,
+          backgroundImage: `url(${banner})`,
         }}
       >
-        <div className='hero-overlay bg-opacity-75 backdrop-blur-sm'> </div>
-        <div className='hero-content text-center'>
+        <div className='hero-overlay bg-opacity-75 backdrop-blur-sm '> </div>
+        <div className='hero-content text-center py-8'>
           <div className='max-w-lg text-base-300'>
-            <h1 className='mb-5 text-9xl font-black tracking-wider'>Ownmarks</h1>
+            <h1 className='mb-5 text-9xl font-black tracking-wider'>
+              Talent Exploriz
+            </h1>
             <h1 className='mb-10 text-4xl font-black tracking-wider'>
-              Shows your ability to the world
+              Show your ability to the world
             </h1>
             <p className='mb-10 text-2xl font-semibold text-justify'>
               Show your physical abilities to the world.
