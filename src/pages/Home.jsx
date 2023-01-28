@@ -8,6 +8,7 @@ import 'swiper/swiper-bundle.css'
 
 import Card from '../components/Card'
 import banner from '../image/banner.png'
+import Slider from '../components/slider/Slider'
 
 function Home() {
   const [posts, setPosts] = React.useState([])
@@ -26,6 +27,7 @@ function Home() {
 
   return (
     <>
+      <Slider />
       <div
         className='hero min-h-screen/'
         style={{
