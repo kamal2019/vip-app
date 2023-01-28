@@ -2,6 +2,8 @@ import React from 'react'
 
 import logo from '../image/logo.png'
 
+import pdfFile from '../media/Prospectus.pdf'
+
 function About() {
   return (
     <div className='flex flex-col items-center m-5'>
@@ -31,6 +33,16 @@ function About() {
         world, gaining valuable experiences and a lot of opportunities and
         entertainment at the same time.
       </p>
+
+      <a
+        href={pdfFile}
+        target='_blank'
+        rel='noreferrer'
+        className='bg-warning text-white font-weight-bolder large px-8 py-3 rounded'
+        style={{ fontSize: '25px' }}
+      >
+        View Prospectus
+      </a>
     </div>
   )
 }
