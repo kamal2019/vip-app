@@ -23,7 +23,7 @@ function Footer() {
             </div>
             <div>
               <FaPhoneSquareAlt />
-              <span>+977-9864646525</span>
+              <span>+977-9822791232/9761638701</span>
             </div>
             <div>
               <GrMail /> <span>talentexploriz@gmail.com</span>
