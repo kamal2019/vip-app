@@ -22,12 +22,6 @@ function ForgotPassword() {
       .then(() => {
         toast.dismiss()
         toast.success('Email sent, check your inbox!')
-        toast.info('Redirecting to login page...', {
-          delay: 3000,
-        })
-        setTimeout(() => {
-          window.location.href = '/login'
-        }, 5000)
       })
       .catch((error) => {
         toast.dismiss()
