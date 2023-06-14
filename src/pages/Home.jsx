@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import 'swiper/swiper-bundle.css'
 
 import Card from '../components/Card'
-import banner from '../image/banner.png'
+import hero from '../image/hero.jpg'
 
 function Home() {
   const [posts, setPosts] = React.useState([])
@@ -27,19 +27,19 @@ function Home() {
   return (
     <>
       <div
-        className='hero min-h-screen/'
+        className='hero min-h-screen/2'
         style={{
-          backgroundImage: `url(${banner})`,
+          backgroundImage: `url(${hero})`,
         }}
       >
-        <div className='hero-overlay bg-opacity-75 backdrop-blur-sm '> </div>
-        <div className='hero-content text-center py-8'>
+        <div className='hero-overlay bg-opacity-75 backdrop-blur-sm'> </div>
+        <div className='hero-content text-center'>
           <div className='max-w-lg text-base-300'>
             <h1 className='mb-5 text-4xl lg:text-9xl font-black tracking-wider'>
               Talent Exploriz
             </h1>
             <h1 className='mb-10 text-4xl font-black tracking-wider'>
-              Show your ability to the world
+              In Physical Activities
             </h1>
 
             <button
