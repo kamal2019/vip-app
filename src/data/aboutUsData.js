@@ -182,6 +182,7 @@ const aboutUsData = {
       description: [
         'Chief Technical Officer',
         'Bsc.HONS Computing (ISLINGTON College)',
+        'Software Engineer (Innovate Tech)',
       ],
     },
     {

@@ -34,7 +34,7 @@ function Home() {
         className='hero min-h-screen/2'
         style={{
           backgroundImage: `url(${hero})`,
-          backgroundSize: '300px 100px',
+          backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
         }}
       >
@@ -64,7 +64,7 @@ function Home() {
       </div>
 
       <div className='flex flex-col items-center'>
-        <h1 className='text-6xl font-semibold text-center m-5'>
+        <h1 className='text-2xl md:text-6xl font-semibold text-center m-5'>
           Recent Events
         </h1>
 

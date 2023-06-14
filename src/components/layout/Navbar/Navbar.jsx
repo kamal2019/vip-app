@@ -57,7 +57,7 @@ function Navbar() {
         localStorage.removeItem('user')
       })
   }
-
+  console.log(isLoggedIn, 'is it logged in')
   return (
     <div className='navbar bg-neutral text-neutral-active shadow-xl z-10 sticky top-0 backdrop-filter backdrop-blur-xl bg-opacity-30 p-0 md:p-2'>
       {/* Navbar for small screen */}
@@ -100,10 +100,12 @@ function Navbar() {
               <li>
                 <button
                   className='btn btn-outline'
-                  onClick={logout}
+                  onClick={() => {
+                    window.location.href = '/login'
+                  }}
                   type='button'
                 >
-                  Logout
+                  Login
                 </button>
               </li>
             )}
@@ -145,7 +147,7 @@ function Navbar() {
           )}
           {isAdmin && (
             <li>
-              <a href='/participants'>Participants</a>
+              <a href='/participants'>Participants</a>isLoggedIn
             </li>
           )}
           <li>

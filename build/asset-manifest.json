@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f5da5db.css",
-    "main.js": "/static/js/main.0d36bf82.js",
+    "main.css": "/static/css/main.682bca95.css",
+    "main.js": "/static/js/main.d9238cfd.js",
     "static/media/mt3.jpg": "/static/media/mt3.431ed0a254faf29f60c1.jpg",
     "static/media/mt5.jpg": "/static/media/mt5.ca6464b5708d3de08f4c.jpg",
     "static/media/logo.png": "/static/media/logo.713e3252c1bbc7ce6505.png",
@@ -11,8 +11,8 @@
     "static/media/member3.jpg": "/static/media/member3.9661aab956e9e016f14e.jpg",
     "static/media/Sports.jpg": "/static/media/Sports.4b6650218e59ae55b385.jpg",
     "static/media/mt4.jpg": "/static/media/mt4.f764a357fd9d0b0eddff.jpg",
+    "static/media/hero.png": "/static/media/hero.97845ddd12e7d6f6b3ae.png",
     "static/media/mt2.jpg": "/static/media/mt2.e7829aab50c1c6810a70.jpg",
-    "static/media/hero.png": "/static/media/hero.29fa5b3ca5f2d0d41f08.png",
     "static/media/mt6.jpeg": "/static/media/mt6.0ee4354e15dc0b56c936.jpeg",
     "static/media/l2.jpg": "/static/media/l2.e6c69a5585cdc35a90ee.jpg",
     "static/media/outcomes.png": "/static/media/outcomes.7ca7130c2f80b63d931a.png",
@@ -24,11 +24,11 @@
     "static/media/mt8.jpg": "/static/media/mt8.561b3568a1a5b5a4ebad.jpg",
     "static/media/l1.jpg": "/static/media/l1.81cd95a23e1ccdee29fb.jpg",
     "index.html": "/index.html",
-    "main.3f5da5db.css.map": "/static/css/main.3f5da5db.css.map",
-    "main.0d36bf82.js.map": "/static/js/main.0d36bf82.js.map"
+    "main.682bca95.css.map": "/static/css/main.682bca95.css.map",
+    "main.d9238cfd.js.map": "/static/js/main.d9238cfd.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f5da5db.css",
-    "static/js/main.0d36bf82.js"
+    "static/css/main.682bca95.css",
+    "static/js/main.d9238cfd.js"
   ]
 }
