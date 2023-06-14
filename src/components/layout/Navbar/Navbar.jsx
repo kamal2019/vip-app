@@ -59,7 +59,7 @@ function Navbar() {
   }
 
   return (
-    <div className='navbar bg-neutral text-neutral-active shadow-xl z-10 sticky top-0 backdrop-filter backdrop-blur-xl bg-opacity-30 border-b border-accent-focus'>
+    <div className='navbar bg-neutral text-neutral-active shadow-xl z-10 sticky top-0 backdrop-filter backdrop-blur-xl bg-opacity-30'>
       {/* Navbar for small screen */}
       <div className='navbar-start lg:hidden'>
         <div className='dropdown'>
@@ -117,7 +117,10 @@ function Navbar() {
           className='normal-case text-2xl font-extrabold tracking-widest'
           href='/'
         >
-          <img src={logo} alt='logo' className='h-18 w-36' />
+          <div style={{ width: '70px' }}>
+            <img src={logo} alt='logo' className='w-full' />
+          </div>
+          {/* <img src={logo} alt='logo' className='h-18 w-36' /> */}
         </a>
       </div>
 

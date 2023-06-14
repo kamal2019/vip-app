@@ -35,15 +35,13 @@ function Home() {
         <div className='hero-overlay bg-opacity-75 backdrop-blur-sm '> </div>
         <div className='hero-content text-center py-8'>
           <div className='max-w-lg text-base-300'>
-            <h1 className='mb-5 text-9xl font-black tracking-wider'>
+            <h1 className='mb-5 text-4xl lg:text-9xl font-black tracking-wider'>
               Talent Exploriz
             </h1>
             <h1 className='mb-10 text-4xl font-black tracking-wider'>
               Show your ability to the world
             </h1>
-            <p className='mb-10 text-2xl font-semibold text-justify'>
-              Show your physical abilities to the world.
-            </p>
+
             <button
               type='button'
               className='btn btn-block text-lg font-bold border-none transition ease-in-out delay-150 bg-gradient-to-r from-[#223f6f]  to-[#c30404] hover:-translate-y-1 hover:scale-105 duration-300'

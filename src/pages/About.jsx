@@ -1,35 +1,117 @@
 import React from 'react'
 
-import logo from '../image/logo.png'
+import AboutUsTitle from '../components/AboutUsTitle/AboutUsTitle'
+import aboutUsData from '../data/aboutUsData'
+import steps from '../assets/images/steps.png'
+import MembersContainer from '../components/MembersContainer/MembersContainer'
+import outcomes from '../assets/images/outcomes.png'
+import CustomersCard from '../components/CustomersCard/CustomersCard'
 
 function About() {
   return (
-    <div className='flex flex-col items-center m-5'>
-      <img className='w-2/12' src={logo} alt='logo' />
-      <h1 className='text-6xl font-bold m-5'>About</h1>
-      <p className='text-2xl p-5 text-justify leading-loose max-w-7xl'>
-        Talent Exploriz
-        <span className=' font-mono'>(show your ability to the world)</span> is
-        one of the best platforms for challengers in extra-curricular
-        activities. We always think about doing some productive tasks that can
-        open up our brains to several areas of experience. Here, we welcome you
-        to our biggest platform TALENT EXPLORIZ which allows you to participate
-        in your favourite curricular activities in a weekly basis that helps you
-        to connect with people of different attitudes and knowledge and want to
-        spend some time for learning and bringing some positive attitude. Talent
-        Exploriz aims to provide a wonderful platform to you to explore yourself
-        in this competitive environment. Focusing on youths interested in
-        Co-curricular activities like physical and mental events to show there
-        inner talents Infront of world. We assure you that we will definitely
-        let the world know about you and your talent which is hidden or
-        underrated.
-        <br /> Here, you can earn experience and money from your interesting
-        extra curricular activities like futsal tournament, basketball
-        tournament, chess tournament, and other indoor or outdoor activities. so
-        that you can can get cash prize up to Rs. 5000, certificate of
-        participation, and you will able to Show your talent and skills to the
-        world, gaining valuable experiences and a lot of opportunities and
-        entertainment at the same time.
+    <div className='flex flex-col items-center mt-2 overflow-hidden'>
+      <p className='text-1xl lg:text-2xl mt-5 p-5 leading-loose lg:leading-10 text-justify max-w-7xl'>
+        <div>
+          <AboutUsTitle text='Overview' />
+          <p>{aboutUsData?.overview}</p>
+        </div>
+
+        <div className='mt-5'>
+          <AboutUsTitle text='The Company' />
+          <p>{aboutUsData?.about}</p>
+        </div>
+        <div className='mt-5'>
+          <AboutUsTitle text='The Big Picture' />
+          <div className='border-y-4 border-indigo-500 mt-4 flex justify-between flex-wrap px-2 py-5'>
+            {aboutUsData?.picture?.map((item) => (
+              <div key={item.description} className='w-80 text-center'>
+                <span className='text-3xl font-semibold'>{item?.title} :</span>
+                <p>{item?.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className='mt-5'>
+          <AboutUsTitle text='Background' />
+          <p>{aboutUsData?.background}</p>
+        </div>
+        <div className='mt-5'>
+          <AboutUsTitle text='What We Can Offer?' />
+          <table className='text-white'>
+            <thead className='bg-sky-600	'>
+              <tr>
+                <th className='text-center'>PROBLEMS</th>
+                <th className='text-center'>SOLUTIONS</th>
+              </tr>
+            </thead>
+            <tbody>
+              {aboutUsData?.problemSolution?.map((item) => (
+                <tr className='bg-blue-300 border-y-4 text-start'>
+                  <td className='border-r-4 px-2'>{item?.problem}</td>
+                  <td className='px-2'>{item?.solution}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>{' '}
+        </div>
+        <div className='mt-5'>
+          <AboutUsTitle
+            text='Steps Figure-out'
+            className='underline text-center'
+          />
+          <div className='mt-5'>
+            <img src={steps} alt='steps.png' />
+          </div>
+        </div>
+        <div className='mt-12'>
+          <AboutUsTitle text='Goals and Targets' />
+          <p>{aboutUsData?.goals}</p>
+        </div>
+        <div className='mt-5'>
+          <AboutUsTitle text='Target Customers' />
+          <div className='flex flex-col sm:flex-col lg:flex-row flex-wrap'>
+            {aboutUsData?.customers?.map((item) => (
+              <CustomersCard data={item} />
+            ))}
+          </div>
+        </div>
+        <div className='mt-12'>
+          <img src={outcomes} alt='alt.png' />
+        </div>
+        <div className='mt-12'>
+          <MembersContainer
+            title='The Leadership'
+            memberDetails={aboutUsData?.leadership}
+          />
+          <MembersContainer
+            className='mt-12'
+            title='Our Mentors'
+            memberDetails={aboutUsData?.mentors}
+          />
+          <MembersContainer
+            className='mt-12'
+            title='Our Management Teams'
+            memberDetails={aboutUsData?.managementTeams}
+          />
+        </div>
+        <div className='mt-5'>
+          <AboutUsTitle text='For More Information' />
+          <p>{aboutUsData?.moreInfo}</p>
+        </div>
+        <div className='mt-5'>
+          <span>
+            For inquiries and clarification, reach out to,
+            <br />
+            <a
+              href='mailto:https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=talentexploriz@gmail.com'
+              target='__blank'
+              className='underline'
+            >
+              talentexploriz@gmail.com
+            </a>
+            Thank You!
+          </span>
+        </div>
       </p>
     </div>
   )
