@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 import AboutUsTitle from '../components/AboutUsTitle/AboutUsTitle'
 import aboutUsData from '../data/aboutUsData'
@@ -8,6 +9,7 @@ import outcomes from '../assets/images/outcomes.png'
 import CustomersCard from '../components/CustomersCard/CustomersCard'
 
 function About() {
+  const theme = useSelector((state) => state.theme.value)
   return (
     <div className='flex flex-col items-center mt-2 overflow-hidden'>
       <p className='text-1xl lg:text-2xl mt-5 p-5 leading-loose lg:leading-10 text-justify max-w-7xl'>
@@ -69,7 +71,11 @@ function About() {
         </div>
         <div className='mt-5'>
           <AboutUsTitle text='Target Customers' />
-          <div className='flex flex-col sm:flex-col lg:flex-row flex-wrap'>
+          <div
+            className={`flex flex-col sm:flex-col lg:flex-row flex-wrap ${
+              theme === 'night' ? 'text-black' : ''
+            }`}
+          >
             {aboutUsData?.customers?.map((item) => (
               <CustomersCard data={item} />
             ))}
@@ -78,7 +84,7 @@ function About() {
         <div className='mt-12'>
           <img src={outcomes} alt='alt.png' />
         </div>
-        <div className='mt-12'>
+        <div className={`mt-12 ${theme === 'night' ? 'text-black' : ''}`}>
           <MembersContainer
             title='The Leadership'
             memberDetails={aboutUsData?.leadership}

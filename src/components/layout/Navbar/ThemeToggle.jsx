@@ -1,9 +1,12 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
 import React, { useState, useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { setGlobalTheme } from '../../../redux/slice/themeSlice'
 
 function ThemeToggle() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'emerald')
+  const dispatch = useDispatch()
 
   useEffect(() => {
     document.body.setAttribute('data-theme', theme)
@@ -19,6 +22,10 @@ function ThemeToggle() {
 
     document.body.setAttribute('data-theme', theme)
   }
+
+  useEffect(() => {
+    dispatch(setGlobalTheme(theme))
+  }, [theme, dispatch])
 
   return (
     <label className='swap swap-rotate'>
